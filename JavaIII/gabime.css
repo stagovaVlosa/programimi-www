@@ -1,0 +1,17 @@
+/* Diagnoza:
+   1. #poster (ID) ka specifikë më të lartë se .poster (klasë), prandaj
+      color: white fitonte mbi color: #17263c → tekst i bardhë mbi sfond të bardhë.
+   2. width: 700px + padding 80px në të dy anët = 860px > 360px → paneli dilte nga ekrani.
+   Riparimi (pa !important): rregulli me ID u hoq, ngjyrat mbesin te .poster,
+   ndërsa gjerësia u bë fleksibile me max-width dhe box-sizing: border-box. */
+.poster {
+  color: var(--ngjyra-teksti);
+  background: var(--ngjyra-paneli);
+  width: 100%;
+  max-width: 42rem;
+}
+@media (max-width: 400px) {
+  .poster {
+    padding: var(--hapesire-m);
+  }
+}

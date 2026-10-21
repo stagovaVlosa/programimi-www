@@ -1,0 +1,86 @@
+:root {
+  --ngjyra-teksti: #17263c;
+  --ngjyra-sfondi: #f3f6fa;
+  --ngjyra-paneli: #fff;
+  --ngjyra-kryesore: #1d6b62;
+  --ngjyra-kufiri: #ccd5e0;
+  --ngjyra-fokusi: #e08a00;
+  --hapesire-s: 0.5rem;
+  --hapesire-m: 1rem;
+  --hapesire-l: 2rem;
+  --rrumbullakimi: 8px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--ngjyra-teksti);
+  background: var(--ngjyra-sfondi);
+}
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus {
+  left: var(--hapesire-m);
+  top: var(--hapesire-m);
+  padding: var(--hapesire-s);
+  background: var(--ngjyra-paneli);
+}
+.koka {
+  padding: var(--hapesire-m) var(--hapesire-m) var(--hapesire-s);
+  border-bottom: 3px solid var(--ngjyra-kryesore);
+}
+main,
+footer {
+  padding: var(--hapesire-l) var(--hapesire-m) 0;
+}
+.poster {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--hapesire-l);
+  background: var(--ngjyra-paneli);
+  border: 1px solid var(--ngjyra-kufiri);
+  border-radius: var(--rrumbullakimi);
+}
+.etiketat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hapesire-s);
+  padding: 0;
+  list-style: none;
+}
+.etiketa {
+  padding: 0.25rem 0.75rem;
+  border: 2px solid var(--ngjyra-kryesore);
+  border-radius: 999px;
+}
+/* Etiketat dallohen edhe me tekst e me stil të kufirit, jo vetëm me ngjyrë. */
+.etiketa--kufizuar {
+  border-style: dashed;
+}
+.etiketa--online {
+  border-style: double;
+  border-width: 4px;
+}
+.butoni {
+  display: inline-block;
+  padding: var(--hapesire-s) var(--hapesire-m);
+  color: #fff;
+  background: var(--ngjyra-kryesore);
+  border-radius: 6px;
+}
+.butoni:hover {
+  background: #14524b;
+}
+a:focus-visible {
+  outline: 3px solid var(--ngjyra-fokusi);
+  outline-offset: 3px;
+}
+.shenim {
+  max-width: 42rem;
+  margin: var(--hapesire-m) auto 0;
+}
