@@ -1,7 +1,5 @@
 # Testet — Prova 1
 
-**Varianti A** · Zgjidhje ushtrimi pas vlerësimit, e shkruar me ndihmën e AI (Claude) për të mësuar. Nuk është dorëzimi i provës.
-
 | Testi | Rezultati i pritur | Rezultati real |
 |---|---|---|
 | Tri karta | Titujt dhe kategoritë përputhen me variantin | Shfaqen Teleskopi, Uji, Energjia, secila me "Kategoria: Shkencë" |
