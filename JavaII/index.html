@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muzeu i sendeve të zakonshme</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header>
+      <p>Programimi në WWW · Java II</p>
+      <h1>Muzeu i sendeve të zakonshme</h1>
+    </header>
+    <main id="main">
+      <nav aria-label="Sendet e ekspozitës">
+        <ul>
+          <li><a href="#celesi">Çelësi</a></li>
+          <li><a href="#filxhani">Filxhani</a></li>
+          <li><a href="#bileta">Bileta</a></li>
+        </ul>
+      </nav>
+      <p>Ekspozita: <time datetime="2026-10-01">1 tetor 2026</time></p>
+
+      <section class="galeria" aria-label="Sendet e muzeut">
+        <article id="celesi" class="karta">
+          <h2>Çelësi</h2>
+          <figure>
+            <img src="celesi.svg" alt="Çelës i vjetër ngjyrë bronzi me kokë të rrumbullakët" width="210" height="210" />
+            <figcaption>Hapja e një dere mund të jetë fillimi i një historie.</figcaption>
+          </figure>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Ky çelës u gjet në xhepin e një palltoje të harruar në bibliotekë. Askush nuk e di cilën derë hap.</p>
+          </details>
+        </article>
+
+        <article id="filxhani" class="karta">
+          <h2>Filxhani</h2>
+          <figure>
+            <img src="filxhani.svg" alt="Filxhan blu me dorezë të rrumbullakët" width="210" height="210" />
+            <figcaption>Një filxhan mbledh kujtime nga bisedat.</figcaption>
+          </figure>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Nga ky filxhan u pi çaji i parë i klubit të leximit. Që atëherë, çdo takim nis me të.</p>
+          </details>
+        </article>
+
+        <article id="bileta" class="karta">
+          <h2>Bileta</h2>
+          <figure>
+            <img src="bileta.svg" alt="Biletë e verdhë me vijë të ndërprerë për t'u shqyer" width="210" height="210" />
+            <figcaption>Një udhëtim i shkurtër, një kujtim i gjatë.</figcaption>
+          </figure>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Bileta e një treni të mbrëmjes drejt detit. Pjesa e shqyer mbeti te kontrollori.</p>
+          </details>
+        </article>
+      </section>
+    </main>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+  </body>
+</html>
