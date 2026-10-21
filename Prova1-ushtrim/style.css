@@ -1,0 +1,35 @@
+/* width përfshin padding-un dhe border-in */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui;
+  margin: 1rem;
+}
+/* 360 px: një kolonë. Në vend të width: 900px, kutia merr gjerësinë e prindit. */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 900px;
+  padding: 2rem;
+  border: 2px solid navy;
+}
+.card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #99a;
+  /* fjala e gjatë pa hapësira thyhet dhe nuk del jashtë kartës */
+  overflow-wrap: anywhere;
+}
+/* 1000 px: tri kolona */
+@media (min-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* outline: none u hoq; fokusi tani shihet me Tab */
+a:focus-visible {
+  outline: 3px solid navy;
+  outline-offset: 3px;
+}
