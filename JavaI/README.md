@@ -15,13 +15,8 @@ Pasaportë digjitale për personazhin e sajuar **Arta Orbita**, udhërrëfyese e
 ## Testet
 | Hyrje | Rezultati i pritur | Rezultati i marrë |
 |---|---|---|
-| Hap `index.html` | Shfaqet h1 dhe lista me 3 aftësi | ✅ |
-| Kliko "Rreth Artës" | Hapet `rreth.html`, pa 404 | ✅ |
-| Kliko "Kthehu te pasaporta" | Kthehet te `index.html`, pa 404 | ✅ |
-| DevTools → Network, rifresko | URL, metoda GET, statusi 200 | (plotëso) |
+| Hap `index.html` | Shfaqet h1 dhe lista me 3 aftësi | 
+| Kliko "Rreth Artës" | Hapet `rreth.html`, pa 404 |
+| Kliko "Kthehu te pasaporta" | Kthehet te `index.html`, pa 404 |
+| DevTools → Network, rifresko | URL, metoda GET, statusi 200 | 
 
-## Reflektim
-(plotëso)
-
-## Deklarimi i AI/burimeve
-(plotëso)
