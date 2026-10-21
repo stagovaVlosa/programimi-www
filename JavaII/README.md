@@ -29,8 +29,5 @@ Faqe e një muzeu të sajuar me tre sende të zakonshme:
 | Ndrysho emrin e një SVG përkohësisht | Shfaqet teksti `alt` | |
 | DevTools → modaliteti telefon (360px) | Kartat njëra nën tjetrën, pa scroll horizontal | |
 
-## Reflektim
-Në këtë javë mësova se struktura semantike (`article`, `figure`, `figcaption`, `nav`, `time`) e bën faqen më të qartë jo vetëm për lexuesin, por edhe për shfletuesin dhe lexuesit e ekranit. Teksti `alt` është i rëndësishëm, sepse kur imazhi nuk ngarkohet, përdoruesi prapë e kupton çfarë paraqet. Elementi `details/summary` më lejoi ta fsheh dhe ta shfaq historinë pa përdorur JavaScript. Më e vështira ishte rregullimi i kartave që të përshtaten edhe në ekran të ngushtë.
-
 ## Deklarimi i AI/burimeve
 Skeleti dhe imazhet SVG janë marrë nga materiali i ushtrimit (Fillimi_JavaII). Kodi u shkrua me ndihmën e Claude (AI).
