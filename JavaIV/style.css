@@ -1,0 +1,113 @@
+:root {
+  --teksti: #17263c;
+  --sfondi: #f3f6fa;
+  --paneli: #fff;
+  --kryesore: #1d6b62;
+  --kufiri: #ccd5e0;
+  --hapesira: 1rem;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: var(--teksti);
+  background: var(--sfondi);
+}
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus {
+  left: var(--hapesira);
+  top: var(--hapesira);
+  padding: 0.5rem;
+  background: var(--paneli);
+}
+.koka,
+main,
+footer {
+  padding: 0 var(--hapesira);
+}
+.koka {
+  padding-top: var(--hapesira);
+  border-bottom: 3px solid var(--kryesore);
+}
+footer {
+  margin: 2rem 0 var(--hapesira);
+}
+
+/* Menuja fleksibile: lidhjet kalojnë në rresht të ri kur s'ka vend */
+.menuja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0;
+  list-style: none;
+}
+.menuja a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+a {
+  color: #1f5f99;
+}
+a:focus-visible {
+  outline: 3px solid var(--kryesore);
+  outline-offset: 3px;
+}
+
+/* Imazh fleksibël: nuk del kurrë më i gjerë se prindi */
+.banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: var(--hapesira);
+  border-radius: 8px;
+}
+
+/* Grid: 1 kolonë nën 600px, 2 nga 600 deri në 899px, 3 nga 900px */
+.kartat {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--hapesira);
+}
+@media (min-width: 600px) {
+  .kartat {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .kartat {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pa lartësi fikse; teksti i gjatë thyhet brenda kartës */
+.karta {
+  min-width: 0;
+  padding: var(--hapesira);
+  background: var(--paneli);
+  border: 1px solid var(--kufiri);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.karta h3 {
+  margin-top: 0;
+}
+.kategoria {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0.5rem;
+  border: 1px solid var(--kryesore);
+  border-radius: 999px;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 0 0.75rem;
+}
