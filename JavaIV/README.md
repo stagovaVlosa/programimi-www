@@ -35,7 +35,7 @@ Testuar në Chrome me pamje responsive.
 ## Reflektim individual
 **Kur do të zgjidhje Flexbox dhe kur Grid?**
 
-Flexbox e zgjedh kur elementet rreshtohen në një drejtim të vetëm, si menuja ime (Programi, Detajet, Info): lidhjet vihen në një rresht dhe me `flex-wrap` kalojnë në rresht të ri kur s'ka vend. Grid e zgjedh kur kam nevojë për rreshta dhe kolona njëkohësisht, si kartat e festivalit: me `grid-template-columns` dhe media queries cakton saktë 1, 2 ose 3 kolona sipas gjerësisë së ekranit.
+Flexbox e zgjedh kur elementet rreshtohen në një drejtim të vetëm, si menuja ime (Programi, Detajet, Info): lidhjet vihen në një rresht dhe me `flex-wrap` kalojnë në rresht të ri kur s'ka vend. Grid e zgjedh kur kam nevojë për rreshta dhe kolona njëkohësisht, si kartat e festivalit: me `grid-template-columns` dhe media queries caktoj saktë 1, 2 ose 3 kolona sipas gjerësisë së ekranit.
 
 ## Deklarimi i AI/burimeve
 Skeleti (`index.html`, `style.css`) është marrë nga materiali i ushtrimit. Kodi u shkrua me ndihmën e Claude (AI).
