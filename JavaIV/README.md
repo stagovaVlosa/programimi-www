@@ -32,5 +32,10 @@ Testuar në Chrome me pamje responsive.
 | Lidhjet e menysë dhe "Detaje" | Çdo lidhje ka objektivin e vet | Të gjitha `#id` ekzistojnë në faqe |
 | Tab në menu | Fokusi shihet; Enter hap lidhjen | Lidhja e fokusuar merr kornizë të gjelbër 3px |
 
+## Reflektim individual
+**Kur do të zgjidhje Flexbox dhe kur Grid?**
+
+Flexbox e zgjedh kur elementet rreshtohen në një drejtim të vetëm, si menuja ime (Programi, Detajet, Info): lidhjet vihen në një rresht dhe me `flex-wrap` kalojnë në rresht të ri kur s'ka vend. Grid e zgjedh kur kam nevojë për rreshta dhe kolona njëkohësisht, si kartat e festivalit: me `grid-template-columns` dhe media queries cakton saktë 1, 2 ose 3 kolona sipas gjerësisë së ekranit.
+
 ## Deklarimi i AI/burimeve
 Skeleti (`index.html`, `style.css`) është marrë nga materiali i ushtrimit. Kodi u shkrua me ndihmën e Claude (AI).
