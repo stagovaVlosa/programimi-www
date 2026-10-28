@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regjistrimi u pranua</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header class="koka">
+      <p>Programimi në WWW · Java V</p>
+      <h1>Regjistrimi u pranua (demonstrim)</h1>
+    </header>
+    <main id="main">
+      <p>Formulari kaloi validimin e shfletuesit dhe u dërgua me metodën <strong>GET</strong>. Vlerat janë tani në URL, pas shenjës <code>?</code>:</p>
+      <p class="url"><code id="kerkesa">—</code></p>
+
+      <h2>Çfarë mori faqja</h2>
+      <dl id="te-dhenat" class="te-dhenat"></dl>
+
+      <h2>Kujdes</h2>
+      <ul>
+        <li>Kjo faqe është statike: <strong>asnjë regjistrim nuk ruhet në server</strong>. Ajo vetëm lexon vlerat nga URL-ja.</li>
+        <li>Me GET, vlerat shihen në shiritin e adresës, ruhen në historikun e shfletuesit dhe mund të dalin në log-et e serverit. Prandaj këtu përdorim vetëm të dhëna të sajuara.</li>
+      </ul>
+      <p><a href="index.html">Kthehu te formulari</a></p>
+    </main>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+    <script>
+      // Lexon parametrat GET dhe i shfaq si tekst (textContent, jo HTML)
+      const parametrat = new URLSearchParams(location.search);
+      document.getElementById("kerkesa").textContent = location.search || "(URL pa parametra)";
+      const lista = document.getElementById("te-dhenat");
+      const emrat = {
+        pseudonimi: "Pseudonimi",
+        email: "Email",
+        grupi: "Madhësia e grupit",
+        kategoria: "Kategoria",
+        rregullat: "Pranoi rregullat",
+      };
+      for (const [celesi, etiketa] of Object.entries(emrat)) {
+        const dt = document.createElement("dt");
+        const dd = document.createElement("dd");
+        dt.textContent = etiketa;
+        dd.textContent = parametrat.get(celesi) || "—";
+        lista.append(dt, dd);
+      }
+    </script>
+  </body>
+</html>

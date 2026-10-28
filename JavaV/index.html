@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulari i misionit sekret</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header class="koka">
+      <p>Programimi në WWW · Java V</p>
+      <h1>Formulari i misionit sekret</h1>
+    </header>
+    <main id="main">
+      <p class="shenim">Përdor vetëm të dhëna të sajuara (pseudonim, email fiktiv). Formulari dërgohet me GET, ndaj vlerat shfaqen në URL.</p>
+
+      <section aria-labelledby="titulli-oraret">
+        <h2 id="titulli-oraret">Oraret e misionit</h2>
+        <div class="tabela-mbeshtjellese">
+          <table>
+            <caption>Tri oraret e misionit në kampus (të sajuara)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Orari</th>
+                <th scope="col">Dita</th>
+                <th scope="col">Pika e takimit</th>
+                <th scope="col">Vende të lira</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Mëngjesi</th>
+                <td><time datetime="2026-11-12T09:00">12 nëntor, 09:00</time></td>
+                <td>Biblioteka, hyrja veriore</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th scope="row">Mesdita</th>
+                <td><time datetime="2026-11-12T13:00">12 nëntor, 13:00</time></td>
+                <td>Oborri i fakultetit</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row">Mbrëmja</th>
+                <td><time datetime="2026-11-13T18:00">13 nëntor, 18:00</time></td>
+                <td>Kulla e sahatit</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="titulli-regjistrimi">
+        <h2 id="titulli-regjistrimi">Regjistrimi</h2>
+        <p>Fushat me <span aria-hidden="true">*</span> janë të detyrueshme.</p>
+
+        <form class="formulari" action="pranuar.html" method="get">
+          <div class="fusha">
+            <label for="pseudonimi">Pseudonimi <span aria-hidden="true">*</span></label>
+            <input id="pseudonimi" name="pseudonimi" type="text" required minlength="3" maxlength="20" pattern=".{3,20}" autocomplete="off" aria-describedby="pseudonimi-ndihme" />
+            <p class="ndihme" id="pseudonimi-ndihme">3–20 karaktere, p.sh. Dhelpra.</p>
+          </div>
+
+          <div class="fusha">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="off" aria-describedby="email-ndihme" />
+            <p class="ndihme" id="email-ndihme">Email fiktiv, p.sh. agjenti@shembull.com</p>
+          </div>
+
+          <div class="fusha">
+            <label for="grupi">Madhësia e grupit <span aria-hidden="true">*</span></label>
+            <input id="grupi" name="grupi" type="number" required min="1" max="5" step="1" inputmode="numeric" aria-describedby="grupi-ndihme" />
+            <p class="ndihme" id="grupi-ndihme">Nga 1 deri në 5 persona.</p>
+          </div>
+
+          <fieldset>
+            <legend>Kategoria <span aria-hidden="true">*</span></legend>
+            <div class="zgjedhjet">
+              <label><input type="radio" name="kategoria" value="Eksplorues" required /> Eksplorues</label>
+              <label><input type="radio" name="kategoria" value="Detektiv" /> Detektiv</label>
+              <label><input type="radio" name="kategoria" value="Kartograf" /> Kartograf</label>
+            </div>
+          </fieldset>
+
+          <div class="fusha">
+            <label class="pajtimi"><input type="checkbox" name="rregullat" value="po" required /> Pranoj rregullat e misionit <span aria-hidden="true">*</span></label>
+          </div>
+
+          <button type="submit" class="butoni">Dërgo regjistrimin</button>
+        </form>
+      </section>
+    </main>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+  </body>
+</html>
