@@ -6,7 +6,7 @@ Faqe regjistrimi për një mision të sajuar në kampus:
   - tabela e orareve me tri rreshta (Mëngjesi, Mesdita, Mbrëmja), me `<caption>`, `<th scope="col">` për titujt e kolonave dhe `<th scope="row">` për emrin e orarit
   - formulari me `action="pranuar.html"` dhe `method="get"`:
     - **Pseudonimi**: `type="text"`, `required`, `minlength="3"`, `maxlength="20"` dhe `pattern=".{3,20}"` (`minlength` kontrollohet vetëm për tekst të shkruar nga përdoruesi; `pattern` e kontrollon gjatësinë edhe kur vlera vendoset ndryshe, p.sh. me autofill ose skript)
-    - **Email**: `type="email"`, `required`
+    - **Email**: `type="email"`, `required`; me `inputmode="email"` telefoni hap tastierën me `@`, dhe `autocapitalize="off"` e ndal shkronjën e madhe automatike në fillim
     - **Madhësia e grupit**: `type="number"`, `required`, `min="1"`, `max="5"`
     - **Kategoria**: tri radio (Eksplorues, Detektiv, Kartograf) brenda `<fieldset>` me `<legend>`, `required`
     - **Pranimi i rregullave**: checkbox `required`
@@ -38,6 +38,7 @@ Testuar në Chrome. Validimi u kontrollua me `form.checkValidity()` për secilin
 | Formulari bosh → Dërgo | Nuk kalon | Nuk kalon; të pavlefshme: pseudonimi, email, grupi, kategoria, rregullat |
 | Të dhëna valide (Dhelpra, agjenti@shembull.com, 3, Detektiv, ✓) | Kalon te `pranuar.html` | Kalon; `pranuar.html` shfaq të pesë vlerat dhe query string-un |
 | Email `agjenti.shembull.com` | Nuk kalon | Nuk kalon (email) |
+| Shkrimi i `agjenti2026@shembull.com` me tastierë | Pranohen shifrat dhe `@`; kalon | U shkrua i plotë dhe kalon |
 | Grupi 0 | Nuk kalon | Nuk kalon (grupi) |
 | Grupi 6 | Nuk kalon | Nuk kalon (grupi) |
 | Grupi 1 dhe 5 | Kalon | Kalon |
