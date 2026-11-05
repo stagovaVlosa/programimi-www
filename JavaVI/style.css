@@ -1,0 +1,162 @@
+:root {
+  --teksti: #17263c;
+  --sfondi: #f3f6fa;
+  --paneli: #fff;
+  --kryesore: #1d6b62;
+  --kufiri: #6b7a8c;
+  --sukses: #1b6e2f;
+  --gabimi: #b3261e;
+  --fokusi: #d96d00;
+  --hapesira: 1rem;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: var(--teksti);
+  background: var(--sfondi);
+}
+.skip {
+  position: absolute;
+  left: -999px;
+}
+.skip:focus {
+  left: var(--hapesira);
+  top: var(--hapesira);
+  padding: 0.5rem;
+  background: var(--paneli);
+}
+header,
+main,
+footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: var(--hapesira);
+}
+header p {
+  margin: 0;
+  color: var(--kryesore);
+  font-weight: 600;
+}
+h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  line-height: 1.2;
+}
+footer {
+  color: var(--kufiri);
+  font-size: 0.9rem;
+}
+.paneli {
+  background: var(--paneli);
+  border: 1px solid #d5dde7;
+  border-radius: 0.5rem;
+  padding: var(--hapesira);
+  margin-bottom: var(--hapesira);
+}
+.paneli h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.fusha {
+  margin-bottom: var(--hapesira);
+}
+label {
+  display: block;
+  font-weight: 600;
+}
+input {
+  width: 100%;
+  max-width: 14rem;
+  padding: 0.5rem;
+  font: inherit;
+  border: 1px solid var(--kufiri);
+  border-radius: 0.3rem;
+}
+.ndihme {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--kufiri);
+}
+button {
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--kryesore);
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+:focus-visible {
+  outline: 3px solid var(--fokusi);
+  outline-offset: 2px;
+}
+a {
+  color: var(--kryesore);
+}
+.mesazh {
+  font-weight: 700;
+  margin-top: 0;
+}
+.brenda {
+  color: var(--sukses);
+}
+.jashte,
+.gabim {
+  color: var(--gabimi);
+}
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+}
+dt {
+  font-weight: 600;
+}
+dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Faqja e testeve */
+.permbledhja {
+  font-weight: 700;
+}
+.tabela-kuti {
+  overflow-x: auto;
+  background: var(--paneli);
+  border: 1px solid #d5dde7;
+  border-radius: 0.5rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+caption {
+  text-align: left;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.4rem 0.5rem;
+  border-top: 1px solid #d5dde7;
+}
+tr.kalon td:last-child {
+  color: var(--sukses);
+  font-weight: 700;
+  white-space: nowrap;
+}
+tr.deshton td:last-child {
+  color: var(--gabimi);
+  font-weight: 700;
+  white-space: nowrap;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Planifiko një pasdite me 20 euro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header>
+      <p>Programimi në WWW · Java VI</p>
+      <h1>Planifiko një pasdite me 20 euro</h1>
+    </header>
+    <main id="main">
+      <p>
+        Shkruaj çmimin e aktivitetit për një person dhe sa veta jeni. Kalkulatori
+        tregon nëse futeni në buxhet.
+      </p>
+
+      <!-- novalidate: kontrollin e bën llogarit(), që të shihen edhe mesazhet e tij. -->
+      <form id="forma" class="paneli" novalidate>
+        <div class="fusha">
+          <label for="cmimi">Çmimi për person (€)</label>
+          <input id="cmimi" name="cmimi" type="number" inputmode="decimal" min="0" step="0.01" value="4" />
+        </div>
+        <div class="fusha">
+          <label for="persona">Numri i personave</label>
+          <input id="persona" name="persona" type="number" inputmode="numeric" min="1" max="5" step="1" value="5" aria-describedby="persona-ndihme" />
+          <p id="persona-ndihme" class="ndihme">Nga 1 deri në 5 veta.</p>
+        </div>
+        <div class="fusha">
+          <label for="buxheti">Buxheti (€)</label>
+          <input id="buxheti" name="buxheti" type="number" inputmode="decimal" min="0" step="0.01" value="20" />
+        </div>
+        <button type="submit">Llogarit</button>
+      </form>
+
+      <section class="paneli" aria-labelledby="rezultati-titulli">
+        <h2 id="rezultati-titulli">Rezultati</h2>
+        <div id="rezultati" aria-live="polite">
+          <p>Shtyp <strong>Llogarit</strong> për të parë rezultatin.</p>
+        </div>
+      </section>
+
+      <p><a href="teste.html">Shiko testet e funksionit →</a></p>
+    </main>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+    <script type="module" src="ui.js"></script>
+  </body>
+</html>

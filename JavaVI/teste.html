@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testet · Planifiko një pasdite me 20 euro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <header>
+      <p>Programimi në WWW · Java VI</p>
+      <h1>Testet e funksionit <code>llogarit</code></h1>
+    </header>
+    <main id="main">
+      <p><a href="index.html">← Kthehu te kalkulatori</a></p>
+      <p id="permbledhja" class="permbledhja" role="status">Testet po ekzekutohen…</p>
+      <div class="tabela-kuti">
+        <table>
+          <caption>Rezultatet e testeve</caption>
+          <thead>
+            <tr>
+              <th scope="col">Grupi</th>
+              <th scope="col">Testi</th>
+              <th scope="col">Hyrja</th>
+              <th scope="col">Pritet</th>
+              <th scope="col">U mor</th>
+              <th scope="col">Statusi</th>
+            </tr>
+          </thead>
+          <tbody id="rreshtat"></tbody>
+        </table>
+      </div>
+    </main>
+    <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
+    <script type="module">
+      import { ekzekutoTestet } from "./teste.js";
+
+      // JSON.stringify e kthen NaN në null, prandaj hyrjet shkruhen me String().
+      const shfaqHyrjen = (v) => (typeof v === "string" ? `"${v}"` : String(v));
+      const shfaq = (r) =>
+        r.ok
+          ? `ok:true, total:${r.total}, mbetja:${r.mbetja}, brenda:${r.brenda}`
+          : r.error
+            ? `ok:false (${r.error})`
+            : "ok:false";
+
+      const rezultatet = ekzekutoTestet();
+      const tbody = document.getElementById("rreshtat");
+
+      for (const t of rezultatet) {
+        const tr = document.createElement("tr");
+        const qelizat = [
+          t.grupi,
+          t.emri,
+          `llogarit(${t.hyrje.map(shfaqHyrjen).join(", ")})`,
+          shfaq(t.pritet),
+          shfaq(t.marre),
+          t.kalon ? "✓ Kalon" : "✗ Dështon",
+        ];
+        for (const tekst of qelizat) {
+          const td = document.createElement("td");
+          td.textContent = tekst;
+          tr.append(td);
+        }
+        tr.className = t.kalon ? "kalon" : "deshton";
+        tbody.append(tr);
+        console[t.kalon ? "log" : "error"](`${t.kalon ? "✓" : "✗"} ${t.emri}`, t.marre);
+      }
+
+      const kalojne = rezultatet.filter((t) => t.kalon).length;
+      const permbledhja = document.getElementById("permbledhja");
+      permbledhja.textContent = `${kalojne} nga ${rezultatet.length} teste kalojnë.`;
+      permbledhja.dataset.gjithaKalojne = String(kalojne === rezultatet.length);
+    </script>
+  </body>
+</html>
